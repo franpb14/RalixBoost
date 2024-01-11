@@ -9,6 +9,12 @@
   "categories": [
     "Snippets"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/franpb14/RalixBoost"
+  },
+  "keywords": ["ralix", "javascript", "snippets"],
+  "author": "Francisco Jose Perejon Barrios",
   "contributes": {
     "snippets": [
       {
