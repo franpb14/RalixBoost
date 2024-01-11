@@ -1,0 +1,132 @@
+{
+  "find": {
+    "prefix": ["querySelector", "find"],
+    "body": ["find(${1:selector})"],
+    "description": "Finds one element"
+  },
+  "findAll": {
+    "prefix": ["querySelectorAll", "findAll"],
+    "body": ["findAll(${1:selector})"],
+    "description": "Finds multiple elements"
+  },
+  "findParent": {
+    "prefix": ["closest", "findParent"],
+    "body": ["findParent(${1:selector}, ${2:queryParent})"],
+    "description": "Finds the element that first matches queryParent among the parent elements. If no queryParent is passed it will return the first parent of the element."
+  },
+  "findParents": {
+    "prefix": ["closest", "findParent"],
+    "body": ["findParent(${1:selector}, ${2:queryParent})"],
+    "description": "Finds multiple elements that matches queryParent among the parent elements."
+  },
+  "addClass": {
+    "prefix": ["classList", "addClass"],
+    "body": ["addClass(${1:query}, ${2:classList})"],
+    "description": "Wraps classList.add. The parameter query could be also an array of elements. The parameter classList can be a string or array of strings."
+  },
+  "removeClass": {
+    "prefix": ["classList", "removeClass"],
+    "body": ["removeClass(${1:query}, ${2:classList})"],
+    "description": "Wraps classList.remove. The parameter query could be also an array of elements. The parameter classList can be a string or array of strings."
+  },
+  "toggleClass": {
+    "prefix": ["classList", "toggleClass"],
+    "body": ["toggleClass(${1:query}, ${2:classList}, ${4:optionalClassValue})"],
+    "description": "Wraps classList.toggle. The parameter query could be also an array of elements. If the parameter classValue is given, adds or deletes the class depending on this boolean."
+  },
+  "hasClass": {
+    "prefix": ["classList", "hasClass"],
+    "body": ["hasClass(${1:query}, '${2:className}')"],
+    "description": "Wraps classList.contains."
+  },
+  "attr": {
+    "prefix": ["getAttribute", "setAttribute", "attr"],
+    "body": ["attr(${1:query}, '${2:attribute}', ${3:optionalValue})"],
+    "description": "Gets/sets query element attribute. It also accepts an object for multiple assignment."
+  },
+  "removeAttr": {
+    "prefix": ["removeAttribute", "removeAttr"],
+    "body": ["removeAttr(${1:query}, '${2:attribute}')"],
+    "description": "Remove query element attribute. It also accepts an array of attributes."
+  },
+  "data": {
+    "prefix": ["dataset", "data"],
+    "body": ["data(${1:query}, '${2:attribute}', ${3:optionalValue})"],
+    "description": "Similar to attr(), but for dataset."
+  },
+  "removeData": {
+    "prefix": ["dataset", "removeData"],
+    "body": ["removeData(${1:query}, '${2:attribute}')"],
+    "description": "Similar to removeAttr(), but for dataset. If no attribute or attributes are passed all dataset attributes will be deleted."
+  },
+  "insertHTML": {
+    "prefix": ["innerHTML", "appendChild", "insertHTML"],
+    "body": ["insertHTML(${1:query}, ${2:html}, '${3|inner,prepend,append,begin,end|}')"],
+    "description": "Inserts passed html to the query element, based on position. The argument position accepts the following options: inner (default), prepend, append, begin, end."
+  },
+  "elem": {
+    "prefix": ["createElement", "elem"],
+    "body": ["elem(${1:type}, ${2:attributes})"],
+    "description": "Creates and returns an HTML element and assigns given attributes."
+  },
+  "render": {
+    "prefix": "render",
+    "body": ["render('${1:template}', ${2:data})"],
+    "description": "Renders the template, passing the given data. The templates should be defined as JavaScript Functions and injected into the App object."
+  },
+  "serialize": {
+    "prefix": ["URLSearchParams", "serialize"],
+    "body": ["serialize(${1:query})"],
+    "description": "Serializes the given form. It could also be used for hash elements"
+  },
+  "submit": {
+    "prefix": ["fire", "requesSubmit", "submit"],
+    "body": ["submit(${1:query})"],
+    "description": "If rails_ujs is provided in new RalixApp(), submits the form via Rails.fire, otherwise uses requestSubmit (if available) or submit."
+  },
+  "reload": {
+    "prefix": ["reload"],
+    "body": ["reload()"],
+    "description": "Reloads current page."
+  },
+  "visit": {
+    "prefix": ["location", "visit"],
+    "body": ["visit(${1:url})"],
+    "description": "Navigates to the given url, uses Turbo.visit (or Turbolinks.visit) if possible."
+  },
+  "back": {
+    "prefix": ["referrer", "back"],
+    "body": ["back(${1:fallbackUrl})"],
+    "description": "It returns the user to the previous page (via history.back()). If there is no previous page or the referrer has a different hostname than the current one, it will navigate to the fallback url visit(fallbackUrl)"
+  },
+  "currentUrl": {
+    "prefix": ["location", "currentUrl"],
+    "body": ["currentUrl()"],
+    "description": "Returns the current location."
+  },
+  "getParam": {
+    "prefix": ["searchParams", "getParam"],
+    "body": ["getParam(${1:optionalParam})"],
+    "description": "Gets param value from current location. If you don't pass any argument, it will return all current parameters in JSON format"
+  },
+  "on": {
+    "prefix": ["addEventListener", "on"],
+    "body": ["on(${1:query}, ${2:events}, (${3:optionalEvent}) => { ${4:callback} })"],
+    "description": "Wraps addEventListener. on performs preventDefault() on click events for interactive elements (links, buttons and inputs)."
+  },
+  "ajax": {
+    "prefix": ["fetch", "ajax"],
+    "body": ["ajax(${1:path}, { params: ${2:params}, options: ${3:options})"],
+    "description": "Wraps fetch. Adds the object params to path or options.body depending on options.method."
+  },
+  "get": {
+    "prefix": ["fetch", "get"],
+    "body": ["get(${1:path}, { params: ${2:params}, options: ${3:options})"],
+    "description": "Alias for ajax method with options.method as GET."
+  },
+  "post": {
+    "prefix": ["fetch", "get"],
+    "body": ["get(${1:path}, { params: ${2:params}, options: ${3:options})"],
+    "description": "Alias for ajax method with options.method as POST."
+  }
+}
