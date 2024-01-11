@@ -2,7 +2,7 @@
   "name": "ralixboost",
   "displayName": "RalixBoost",
   "description": "Simplify ralix development",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -15,6 +15,7 @@
   },
   "keywords": ["ralix", "javascript", "snippets"],
   "author": "Francisco Jose Perejon Barrios",
+  "publisher": "franpb14",
   "contributes": {
     "snippets": [
       {

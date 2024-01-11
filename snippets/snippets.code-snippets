@@ -111,7 +111,7 @@
   },
   "on": {
     "prefix": ["addEventListener", "on"],
-    "body": ["on(${1:query}, ${2:events}, (${3:optionalEvent}) => { ${4:callback} })"],
+    "body": ["on(${1:query}, '${2:events}', (${3:event}) => { ${4:callback} })"],
     "description": "Wraps addEventListener. on performs preventDefault() on click events for interactive elements (links, buttons and inputs)."
   },
   "ajax": {
