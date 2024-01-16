@@ -116,17 +116,17 @@
   },
   "ajax": {
     "prefix": ["fetch", "ajax"],
-    "body": ["ajax(${1:path}, { params: ${2:params}, options: ${3:options})"],
+    "body": ["ajax(${1:path}, { params: ${2:params}, options: ${3:options} })"],
     "description": "Wraps fetch. Adds the object params to path or options.body depending on options.method."
   },
   "get": {
     "prefix": ["fetch", "get"],
-    "body": ["get(${1:path}, { params: ${2:params}, options: ${3:options})"],
+    "body": ["get(${1:path}, { params: ${2:params}, options: ${3:options} })"],
     "description": "Alias for ajax method with options.method as GET."
   },
   "post": {
     "prefix": ["fetch", "get"],
-    "body": ["get(${1:path}, { params: ${2:params}, options: ${3:options})"],
+    "body": ["get(${1:path}, { params: ${2:params}, options: ${3:options} })"],
     "description": "Alias for ajax method with options.method as POST."
   }
 }

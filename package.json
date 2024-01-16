@@ -1,8 +1,9 @@
 {
   "name": "ralixboost",
   "displayName": "RalixBoost",
-  "description": "Simplify ralix development",
-  "version": "0.0.2",
+  "description": "Enhance your JavaScript development with RalixBoost. Quickly access code snippets tailored for the Ralix framework, boosting efficiency and code maintenance.",
+  "version": "1.0.0",
+  "icon": "assets/ralix.jpg",
   "engines": {
     "vscode": "^1.85.0"
   },
